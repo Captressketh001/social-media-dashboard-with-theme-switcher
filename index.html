@@ -1,87 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <title>Frontend Mentor | Social media dashboard with theme switcher</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <main>
+    <div class="bg">
+      <header>
+      <div class="dashboard">
+        <h1>Social Media Dashboard</h1>
+        <h4>Total Followers: 23,004</h4>
+      </div>
+      <div class="theme-switch-btn">
+        <p style="display: inline; font-weight: 900;">Dark Theme</p>
+        <label id="switch" class="switch">
+          <input type="checkbox" onchange="toggleTheme()" id="slider">
+          <span class="slider round"></span>
+      </label>
+      </div>
+    </header>
+    <div class="sm-container">
+      <div class="social-media" style="border-top: 5px solid hsl(208, 92%, 53%);">
+        <div><img src="./images/icon-facebook.svg" alt="facebook_logo"><small>@nathanf</small> </div>
+        <div class="follower">
+          <h1>1987</h1>
+          <p>Followers</p>
+        </div>
+        <div class="daily-follower">
+          <img src="./images/icon-up.svg" alt="down-svg" style="height: 5px;"><small class="color">12 Today</small>
+        </div>
 
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      </div>
+      <div class="social-media" style="border-top: 5px solid hsl(203, 89%, 53%);">
+        <div>
+          <img src="./images/icon-twitter.svg" alt="twitter_logo">
+          <small>@nathanf</small>
+        </div>
+        <div class="follower">
+          <h1>1044</h1>
+          <p>Followers</p>
+        </div>
+        <div class="daily-follower">
+          <img src="./images/icon-up.svg" alt="down-svg" style="height: 5px;"><small class="color">99 Today</small>
+        </div>
+        
+      </div>
+      <div class="social-media" style="border-top-style: solid; border-top-width: 5px; border-image: linear-gradient(to left, hsl(329, 70%, 58%),
+        hsl(37, 97%, 70%)
+      )1 20%; border-radius: 5px;">
+        <div><img src="./images/icon-instagram.svg" alt="instagram_logo">
+          <small>@realnathanf</small>
+        </div>
+        <div class="follower">
+          <h1>11k</h1>
+          <p>Followers</p>
+        </div>
+        <div class="daily-follower">
+          <img src="./images/icon-up.svg" alt="down-svg" style="height: 5px;"><small class="color">1099 Today</small>
+        </div>
+        
+      </div>
+      <div class="social-media" style="border-top: 5px solid hsl(348, 97%, 39%);">
+        <div><img src="./images/icon-youtube.svg" alt="youtube_logo">
+          <small>Nathan F.</small>
+        </div>
+        <div class="follower">
+          <h1>8239</h1>
+          <p>Subscribers</p>
+        </div>
+        <div class="daily-follower">
+          <img src="./images/icon-down.svg" alt="up-svg" style="height: 5px;"><small id="br">144 Today</small>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+    
+    <div class="bg-2">
+      <h1 class="overview-heading">Overview - Today</h1>
+    <div class="overview">
+      <div>
+        <div class="pageview">
+          <p>Page Views</p> 
+          <img src="./images/icon-facebook.svg" alt="facebook_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>87</h1>
+          <img src="./images/icon-up.svg" alt="up-svg" style="height: 5px;">
+          <small style="color: hsl(163, 72%, 41%);" >3%</small>
+        </div>
+      </div>
+      <div>
+        <div class="pageview">
+          <p>Likes</p> 
+          <img src="./images/icon-facebook.svg" alt="facebook_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>52</h1>
+          <img src="./images/icon-down.svg" alt="down-svg" style="height: 5px;">
+          <small style="color: hsl(356, 69%, 56%);" >2%</small>
+        </div>
+      </div>
+      <div>
+        <div class="pageview">
+          <p>Likes</p> 
+          <img src="./images/icon-instagram.svg" alt="instagram_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>5462</h1>
+          <img src="./images/icon-up.svg" alt="up-svg" style="height: 5px;">
+          <small style="color: hsl(163, 72%, 41%);" >2257%</small>
+        </div>
+      </div>
+      <div>
+        <div class="pageview">
+          <p>Profile Views</p> 
+          <img src="./images/icon-instagram.svg" alt="instagram_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>52k</h1>
+          <img src="./images/icon-up.svg" alt="up-svg" style="height: 5px;">
+          <small style="color: hsl(163, 72%, 41%);" >1375%</small>
+        </div>
+      </div>
+      <div>
+        <div class="pageview">
+          <p>Retweets</p> 
+          <img src="./images/icon-twitter.svg" alt="twitter_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>117</h1>
+          <img src="./images/icon-up.svg" alt="up-svg" style="height: 5px;">
+          <small style="color: hsl(163, 72%, 41%);" >303%</small>
+        </div>
+      </div>
+      <div>
+        <div class="pageview">
+          <p>Likes</p> 
+          <img src="./images/icon-twitter.svg" alt="twitter_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>507</h1>
+          <img src="./images/icon-up.svg" alt="up-svg" style="height: 5px;">
+          <small style="color: hsl(163, 72%, 41%);" >503%</small>
+        </div>
+      </div>
+      <div>
+        <div class="pageview">
+          <p>Likes</p> 
+          <img src="./images/icon-youtube.svg" alt="youtube_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>107</h1>
+          <img src="./images/icon-down.svg" alt="down-svg" style="height: 5px;">
+          <small style="color: hsl(356, 69%, 56%);" >19%</small>
+        </div>
+      </div>
+      <div>
+        <div class="pageview">
+          <p>Total Views</p> 
+          <img src="./images/icon-youtube.svg" alt="youtube_logo">
+          
+        </div>
+        <div class="view-number">
+          <h1>1407</h1>
+          <img src="./images/icon-down.svg" alt="down-svg" style="height: 5px;">
+          <small style="color: hsl(356, 69%, 56%);" >12%</small>
+        </div>
+      </div>
+    </div><div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Oluwakemi Omoyeni</a>.
+    </div>
+    </div>
+    
+    
+  </main>
+<script src="main.js"></script>
 </body>
+
 </html>
