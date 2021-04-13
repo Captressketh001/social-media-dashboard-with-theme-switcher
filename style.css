@@ -42,14 +42,20 @@ header{
     display: flex;
     margin: 0 10% 0 10%;
     padding-top: 1.5em;
-    flex-wrap: wrap;
-   
 }
 header .dashboard{
-    margin-left: 10px;
+    flex: 1;
 }
 header .theme-switch-btn{
     margin: 10px 0 0 auto;
+}
+header .theme-switch-btn p{
+    display: inline;
+    font-weight: 500;
+    position: relative;
+    top: 8px;
+    left: -6px;
+    color: var(--card-text);
 }
 header h1, h4{
     margin: 0;
@@ -68,8 +74,42 @@ header h1, h4{
     }
 }
 @media screen and (max-width: 425px){
+    header{
+        flex-wrap: wrap;
+    }
+    header .dashboard{
+        flex: 1 1 100%;
+    }
     .sm-container{
         grid-template-columns: repeat(1, 1fr);
+    }
+    header h1{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    header .theme-switch-btn{
+        margin: 10px 0 0 0;
+    }
+    header .theme-switch-btn p{
+        padding-right: 160px;
+        padding-left: 6px;
+    }
+}
+@media screen and (max-width: 375px){
+    header .theme-switch-btn p{
+        padding-right: 125px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    header .theme-switch-btn p{
+        padding-right: 100px;
+    }
+}
+@media screen and (max-width: 320px){
+   
+    header .theme-switch-btn p{
+        padding-right: 80px;
     }
 }
 
