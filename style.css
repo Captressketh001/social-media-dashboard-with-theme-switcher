@@ -22,8 +22,7 @@ body{
     --overview: hsl(0, 0%, 100%);
     --toggle: linear-gradient(45deg,  hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
 body h1{
     color: var(--heading);
 }
@@ -112,7 +111,6 @@ header h1, h4{
         padding-right: 80px;
     }
 }
-
 .sm-container > div {
     min-height: 200px;
     border-radius: 5px;
@@ -172,9 +170,6 @@ font-weight: 100;
 #br{
     color: hsl(356, 69%, 56%);
 }
-/* .sm-container div img {
-    margin-top: 10px;
-}  */
 .overview{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -196,6 +191,12 @@ font-weight: 100;
 @media screen and (max-width: 425px){
     .overview{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 320px){
+    .overview-heading{
+        font-size: 20px;
+        padding-top: 7em;
     }
 }
 .overview > div {
@@ -237,17 +238,17 @@ font-weight: 100;
     display: inline-block;
     width: 80px;
     height: 34px;
-  }
+}
   
   /* Hide default HTML checkbox */
-  .switch input {
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
   
   /* The slider */
-  .slider {
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -256,9 +257,9 @@ font-weight: 100;
     bottom: 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-  }
+}
   
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 28px;
@@ -274,32 +275,39 @@ font-weight: 100;
     background: white;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  input + .slider{
+}
+input + .slider{
     background: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   }
-  input:checked + .slider {
+input:checked + .slider {
     background: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   }
   
-  input:focus + .slider {
+input:focus + .slider {
     box-shadow: 0 0 1px #2196f3;
   }
   
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(40px);
     -ms-transform: translateX(40px);
     transform: translateX(40px);
     background: white;
     background-repeat: no-repeat;
     background-position: center;
-  }
+}
   
   /* Rounded sliders */
-  .slider.round {
+.slider.round {
     border-radius: 34px;
-  }
+}
   
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  }
+}
+.attribution { 
+    font-size: 16px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
