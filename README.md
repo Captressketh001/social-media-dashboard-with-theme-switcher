@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/theme-switch-with-javascript-j4yWa6LgZ)
+- Live Site URL: [Add live site URL here](https://nostalgic-visvesvaraya-88b108.netlify.app/)
 
 ## My process
 
