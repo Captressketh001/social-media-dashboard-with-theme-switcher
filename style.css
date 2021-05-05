@@ -41,24 +41,24 @@ header{
     display: flex;
     margin: 0 10% 0 10%;
     padding-top: 1.5em;
+    min-height: 100px;
+    align-items: center;
 }
 header .dashboard{
     flex: 1;
 }
-header .theme-switch-btn{
-    margin: 10px 0 0 auto;
+.btn{
+    display: flex;
+    width: 100%;
 }
-header .theme-switch-btn p{
-    display: inline;
+.btn p{
     font-weight: 500;
-    position: relative;
-    top: 8px;
-    left: -6px;
     color: var(--card-text);
+    position: relative;
+    top: -6px;
+    left: -6px;
 }
-header h1, h4{
-    margin: 0;
-}
+
 .sm-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -76,8 +76,13 @@ header h1, h4{
     header{
         flex-wrap: wrap;
     }
-    header .dashboard{
-        flex: 1 1 100%;
+    .btn{
+        min-width: 320px;
+        justify-content: space-between;
+    }
+    .btn p{
+        /* left: 2px; */
+        flex: 1;
     }
     .sm-container{
         grid-template-columns: repeat(1, 1fr);
@@ -86,31 +91,14 @@ header h1, h4{
         font-size: 20px;
         font-weight: 700;
     }
-    header .theme-switch-btn{
-        margin: 10px 0 0 0;
-    }
-    header .theme-switch-btn p{
-        padding-right: 160px;
-        padding-left: 6px;
-    }
 }
 @media screen and (max-width: 375px){
-    header .theme-switch-btn p{
-        padding-right: 125px;
+    .btn{
+        min-width: 250px;
+        justify-content: space-between;
     }
 }
 
-@media screen and (max-width: 360px){
-    header .theme-switch-btn p{
-        padding-right: 100px;
-    }
-}
-@media screen and (max-width: 320px){
-   
-    header .theme-switch-btn p{
-        padding-right: 80px;
-    }
-}
 .sm-container > div {
     min-height: 200px;
     border-radius: 5px;
@@ -305,7 +293,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 .attribution { 
-    font-size: 16px; 
+    font-size: 12px; 
     text-align: center; 
 }
 .attribution a { 

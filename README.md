@@ -93,6 +93,7 @@ function toggleTheme() {
 ```
 
 ### Continued development
+- settle the nuisance of the theme switch button
 
 - Practice more with CSS GRid and Flexbox
 
